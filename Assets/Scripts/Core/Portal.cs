@@ -52,6 +52,7 @@ public class Portal : MonoBehaviour {
                 traveller.graphicsClone.transform.SetPositionAndRotation (positionOld, rotOld);
                 // Can't rely on OnTriggerEnter/Exit to be called next frame since it depends on when FixedUpdate runs
                 linkedPortal.OnTravellerEnterPortal (traveller);
+                OnTriggerExit(traveller.GetComponent<Collider>());
                 trackedTravellers.RemoveAt (i);
                 i--;
 
