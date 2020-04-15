@@ -301,7 +301,7 @@ public class RigidBodyFPSController : PortalTraveller
     void DoFallDamage(float fallSpeed) // fallSpeed will be positive
     {
         // do your fall logic here using fallSpeed to determine how hard we hit the ground
-        Debug.Log("Hit the ground at " + fallSpeed.ToString() + " units per second");
+        //Debug.Log("Hit the ground at " + fallSpeed.ToString() + " units per second");
     }
 
     void OnCollisionEnter(Collision collision)
@@ -377,8 +377,6 @@ public class RigidBodyFPSController : PortalTraveller
 
     public override void Teleport(Transform fromPortal, Transform toPortal, Vector3 pos, Quaternion rot)
     {
-        Debug.Log("teleported");
-
         transform.position = pos;
         Vector3 eulerRot = rot.eulerAngles;
         rigidbody.transform.eulerAngles = new Vector3(rigidbody.transform.eulerAngles.x, eulerRot.y, rigidbody.transform.eulerAngles.z);
