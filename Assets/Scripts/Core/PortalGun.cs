@@ -10,7 +10,7 @@ public class PortalGun : MonoBehaviour
     public Portal bluePortal;
     public Portal orangePortal;
 
-    public float offsetFromWall = 0.1f;
+    public float offsetFromWall = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +38,8 @@ public class PortalGun : MonoBehaviour
 
             if (collided && firstHit.collider.GetComponent<PortalSurface>() != null)
             {
-                bluePortal.transform.position = firstHit.point + offsetFromWall * firstHit.normal;
                 bluePortal.transform.rotation = Quaternion.LookRotation(firstHit.normal, playerCam.transform.right);
+                bluePortal.transform.position = firstHit.point + offsetFromWall * firstHit.normal - bluePortal.transform.up * bluePortal.GetComponent<BoxCollider>().size.y / 2;
                 bluePortal.embeddedWall = firstHit.collider;
             }
         }
@@ -60,8 +60,8 @@ public class PortalGun : MonoBehaviour
 
             if (collided && firstHit.collider.GetComponent<PortalSurface>() != null)
             {
-                orangePortal.transform.position = firstHit.point + offsetFromWall * firstHit.normal;
                 orangePortal.transform.rotation = Quaternion.LookRotation(-firstHit.normal, -playerCam.transform.right);
+                orangePortal.transform.position = firstHit.point + offsetFromWall * firstHit.normal - orangePortal.transform.up * orangePortal.GetComponent<BoxCollider>().size.y / 2; ;
                 orangePortal.embeddedWall = firstHit.collider;
             }
         }

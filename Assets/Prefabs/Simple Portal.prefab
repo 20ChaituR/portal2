@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedPortal: {fileID: 0}
   screen: {fileID: 3438419960765059613}
+  embeddedWall: {fileID: 0}
   recursionLimit: 2
   nearClipOffset: 0.05
   nearClipLimit: 0.2
@@ -137,7 +138,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.04, y: 2.69, z: 1.55}
+  m_Size: {x: 4.04, y: 2.69, z: 0.3}
   m_Center: {x: 0, y: 1.38, z: 0}
 --- !u!54 &3743597651704331072
 Rigidbody:
@@ -251,16 +252,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: f41802e248f2e42178e949a42908c5b4,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 556cc49e838cc40529b22b3472a66ac3, type: 2}
     - target: {fileID: 998356590043849621, guid: f41802e248f2e42178e949a42908c5b4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 862d756f3c67d421c9ce251cd604fbf3, type: 2}
+    - target: {fileID: -1504981713932161579, guid: f41802e248f2e42178e949a42908c5b4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 556cc49e838cc40529b22b3472a66ac3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f41802e248f2e42178e949a42908c5b4, type: 3}
 --- !u!1 &5858256972162738305 stripped
