@@ -2,6 +2,4 @@
 
 Little test of portals in Unity.
 
-Heavily inspired by [SebLague's Implementation.](https://github.com/SebLague/Portals)
-
-![](demonstration.gif)
+![](demonstration2.gif)
